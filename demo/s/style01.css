@@ -1,0 +1,12 @@
+li {
+  float: left;
+  list-style: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font: 20px Mate;
+  background: rgba(255, 0, 0);
+}
+
+li:nth-child(1) {
+  background: rgb(255, 0, 0);
+}

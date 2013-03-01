@@ -9,6 +9,7 @@ body {
 .iframe {
   width: 510px;
   float: left;
+  height: 470px;
 }
 
 .iframe:nth-child(1) {
