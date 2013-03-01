@@ -1,7 +1,7 @@
 /*
- * FIx 31 css bug in IE (9 and less)
+ * Fix 31 css bug in IE (9 and less)
  * https://github.com/lusever/ie31css
- * MIT Licensed
+ * MIT licensed
  */
 function fixIESheets() {
     var linksList = document.getElementsByTagName('link'),

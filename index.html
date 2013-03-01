@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/reps/ie31css/ie31css.js.html</title>
+<meta name="Generator" content="Vim/7.3">
+<meta name="plugin-version" content="vim7.3_v10">
+<meta name="syntax" content="javascript">
+<meta name="settings" content="number_lines,use_css,pre_wrap,expand_tabs">
+<style type="text/css">
+<!--
+pre { white-space: pre-wrap; font-family: monospace; color: #c5c8c6; background-color: #1d1f21; }
+body { font-family: monospace; color: #c5c8c6; background-color: #1d1f21; }
+.lnr { color: #373b41; }
+.javaScriptConditional { color: #b294bb; }
+.javaScriptNumber { color: #de935f; }
+.javaScriptRepeat { color: #b294bb; }
+.String { color: #b5bd68; }
+.javaScriptMember { color: #de935f; }
+.Identifier { color: #cc6666; }
+.javaScriptBraces { color: #c5c8c6; }
+.javaScriptFunction { color: #b294bb; }
+.Comment { color: #969896; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<span class="lnr"> 1 </span><span class="Comment">/*</span>
+<span class="lnr"> 2 </span><span class="Comment"> * Fix 31 css bug in IE (9 and less)</span>
+<span class="lnr"> 2 </span><span class="Comment"> * Demo at <a href="http://lusever.github.com/ie31css/demo/">http://lusever.github.com/ie31css/demo/</a></span>
+<span class="lnr"> 3 </span><span class="Comment"> * <a href="https://github.com/lusever/ie31css">https://github.com/lusever/ie31css</a></span>
+<span class="lnr"> 4 </span><span class="Comment"> * MIT licensed</span>
+<span class="lnr"> 5 </span><span class="Comment"> */</span>
+<span class="lnr"> 6 </span><span class="javaScriptFunction">function</span> fixIESheets() <span class="javaScriptBraces">{</span>
+<span class="lnr"> 7 </span>    <span class="Identifier">var</span> linksList = <span class="javaScriptMember">document</span>.getElementsByTagName(<span class="String">'link'</span>),
+<span class="lnr"> 8 </span>        links = <span class="javaScriptBraces">[]</span>,
+<span class="lnr"> 9 </span>        i, style, styleSheet;
+<span class="lnr">10 </span>
+<span class="lnr">11 </span>    <span class="javaScriptRepeat">for</span> (i = linksList.length - <span class="javaScriptNumber">1</span>; i &gt;= <span class="javaScriptNumber">0</span>; i = i - <span class="javaScriptNumber">1</span>) <span class="javaScriptBraces">{</span>
+<span class="lnr">12 </span>        <span class="javaScriptConditional">if</span> (linksList<span class="javaScriptBraces">[</span>i<span class="javaScriptBraces">]</span>.rel === <span class="String">'stylesheet'</span> &amp;&amp; linksList<span class="javaScriptBraces">[</span>i<span class="javaScriptBraces">]</span>.href) <span class="javaScriptBraces">{</span>
+<span class="lnr">13 </span>            links.push(linksList<span class="javaScriptBraces">[</span>i<span class="javaScriptBraces">]</span>);
+<span class="lnr">14 </span>        <span class="javaScriptBraces">}</span>
+<span class="lnr">15 </span>    <span class="javaScriptBraces">}</span>
+<span class="lnr">16 </span>
+<span class="lnr">17 </span>    <span class="Comment">// remove all but first</span>
+<span class="lnr">18 </span>    <span class="javaScriptRepeat">for</span> (i = links.length - <span class="javaScriptNumber">1</span>; i &gt;= <span class="javaScriptNumber">1</span>; i = i - <span class="javaScriptNumber">1</span>) <span class="javaScriptBraces">{</span>
+<span class="lnr">19 </span>        links<span class="javaScriptBraces">[</span>i<span class="javaScriptBraces">]</span>.removeNode();
+<span class="lnr">20 </span>    <span class="javaScriptBraces">}</span>
+<span class="lnr">21 </span>
+<span class="lnr">22 </span>    <span class="Comment">// create new style with imports</span>
+<span class="lnr">23 </span>    <span class="javaScriptRepeat">for</span> (i = links.length - <span class="javaScriptNumber">1</span>; i &gt;= <span class="javaScriptNumber">0</span>; i = i - <span class="javaScriptNumber">1</span>) <span class="javaScriptBraces">{</span>
+<span class="lnr">24 </span>        <span class="javaScriptConditional">if</span> (!styleSheet || styleSheet.imports.length === <span class="javaScriptNumber">30</span>) <span class="javaScriptBraces">{</span>
+<span class="lnr">25 </span>            style = <span class="javaScriptMember">document</span>.createElement(<span class="String">'style'</span>);
+<span class="lnr">26 </span>            links<span class="javaScriptBraces">[</span><span class="javaScriptNumber">0</span><span class="javaScriptBraces">]</span>.insertAdjacentElement(<span class="String">'afterEnd'</span>, style);
+<span class="lnr">27 </span>            styleSheet = style.styleSheet;
+<span class="lnr">28 </span>        <span class="javaScriptBraces">}</span>
+<span class="lnr">29 </span>        styleSheet.addImport(links<span class="javaScriptBraces">[</span>i<span class="javaScriptBraces">]</span>.href);
+<span class="lnr">30 </span>    <span class="javaScriptBraces">}</span>
+<span class="lnr">31 </span>
+<span class="lnr">32 </span>    <span class="javaScriptConditional">if</span> (links<span class="javaScriptBraces">[</span><span class="javaScriptNumber">0</span><span class="javaScriptBraces">]</span>) <span class="javaScriptBraces">{</span>
+<span class="lnr">33 </span>        links<span class="javaScriptBraces">[</span><span class="javaScriptNumber">0</span><span class="javaScriptBraces">]</span>.removeNode();
+<span class="lnr">34 </span>    <span class="javaScriptBraces">}</span>
+<span class="lnr">35 </span><span class="javaScriptBraces">}</span>
+</pre>
+</body>
+</html>
