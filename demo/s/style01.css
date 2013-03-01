@@ -1,3 +1,7 @@
+body {
+  margin: auto;
+}
+
 li {
   float: left;
   list-style: none;

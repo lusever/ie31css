@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Workaround for IE 31 stylesheet files limit</title>
   <link media="all" rel="stylesheet" href="s/style.css" type="text/css" />
 </head>
 <body>
   <div class="iframe-wrapper">
-    <iframe class="iframe" src="broken.html" frameborder="0"></iframe>
-    <iframe class="iframe" src="working.html" frameborder="0"></iframe>
+    <hgroup>
+      <h1 class="title">Broken :(</h1>
+      <h1 class="title">Working !</h1>
+    </hgroup>
+    <iframe class="iframe broken" src="broken.html" frameborder="0"></iframe>
+    <iframe class="iframe working" src="working.html" frameborder="0"></iframe>
   </div>
 </body>
 </html>

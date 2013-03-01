@@ -1,17 +1,36 @@
 body {
   margin: 0;
+  background: #eee;
 }
 .iframe-wrapper {
-  margin: 100px auto;
+  margin: 100px auto 0;
   width: 1024px;
+  overflow: hidden;
 }
 
 .iframe {
-  width: 510px;
+  width: 490px;
   float: left;
-  height: 470px;
+  height: 365px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  background: #fff;
 }
 
-.iframe:nth-child(1) {
-  margin: 0 4px 0 0;
+.broken {
+  margin: 0 34px 5px 5px;
+}
+
+.working {
+  margin: 0 5px 5px 0;
+}
+
+.title {
+  font: 22px sans-serif;
+  float: left;
+  width: 510px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #fff;
+  font-weight: bold;
+  color: #222;
 }
