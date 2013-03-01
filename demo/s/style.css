@@ -1,9 +1,9 @@
 body {
   margin: 0;
-  background: #eee;
+  background: #eee url('../i/bg-pattern.png') repeat 0 0;
 }
 .iframe-wrapper {
-  margin: 100px auto 0;
+  margin: 50px auto 0;
   width: 1024px;
   overflow: hidden;
 }
@@ -26,7 +26,7 @@ body {
 }
 
 .title {
-  font: 22px sans-serif;
+  font: 24px sans-serif;
   float: left;
   width: 510px;
   text-align: center;
