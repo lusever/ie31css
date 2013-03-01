@@ -3,6 +3,7 @@
 ## Usage
 After all style tags add:
 ```html
+<script src="ie-31-css-fix.js"></script>
 <!--[if IE]>
     <script>
         fixIESheets();
