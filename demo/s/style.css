@@ -2,8 +2,9 @@ body {
   margin: 0;
   background: #eee url('../i/bg-pattern.png') repeat 0 0;
 }
+
 .iframe-wrapper {
-  margin: 50px auto 0;
+  margin: 30px auto 0;
   width: 1024px;
   overflow: hidden;
 }
@@ -25,14 +26,27 @@ body {
   margin: 0 5px 5px 0;
 }
 
-.title {
+.title,
+.subtitle {
   font: 24px sans-serif;
-  float: left;
-  width: 510px;
   text-align: center;
   text-shadow: 1px 1px 1px #fff;
   font-weight: bold;
   color: #222;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  float: left;
+  width: 510px;
+}
+
+.share {
+  text-align: center;
+  margin-bottom: -47px;
 }
 
 .ie .iframe {
