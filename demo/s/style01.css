@@ -11,6 +11,6 @@ li {
   background: rgba(255, 0, 0);
 }
 
-li:nth-child(1) {
+.item01 {
   background: rgb(255, 0, 0);
 }
