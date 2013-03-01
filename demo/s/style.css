@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+.iframe-wrapper {
+  margin: 100px auto;
+  width: 1024px;
+}
+
+.iframe {
+  width: 510px;
+  float: left;
+}
+
+.iframe:nth-child(1) {
+  margin: 0 4px 0 0;
+}
