@@ -38,3 +38,11 @@ body {
 .ie .iframe {
   border: 1px solid #ccc;
 }
+
+.ie .broken {
+  margin: 0 34px 5px 3px;
+}
+
+.ie .working {
+  margin: 0 3px 5px 0;
+}
