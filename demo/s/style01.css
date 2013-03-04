@@ -2,13 +2,19 @@ body {
   margin: auto;
 }
 
+ul {
+  margin-top: 20px;
+}
+
 li {
-  float: left;
-  list-style: none;
-  padding: 10px 20px;
-  margin: 10px 0;
-  font: 20px Mate;
   background: rgb(255, 0, 0);
+  float: left;
+  font: 20px Georgia;
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px 0;
+  text-align: center;
+  width: 57px;
 }
 
 .item01 {
